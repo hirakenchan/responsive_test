@@ -1,0 +1,587 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea {
+	font-size: 100%;
+	vertical-align: middle;
+}
+
+img {
+	border-style: none;
+	display: block;
+}
+
+hr {
+	display: none;
+}
+
+em {
+	font-style: normal
+}
+
+input {
+	line-height: auto;
+	vertical-align: middle;
+}
+
+strong.more {
+	color: #c30;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'PMingLiU-ExtB', 'MingLiU-ExtB', 'Meiryo UI', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
+	width: 100vw;
+}
+
+html, body {
+	-webkit-overflow-x: clip;
+	-moz-overflow-x: clip;
+	-o-overflow-x: clip;
+	-ms-overflow-x: clip;
+	overflow-x: clip;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* 下に追記 */
+.common_container {
+	background-image: url('./images/top.jpeg');
+	background-size: cover;
+	opacity: 0.8;
+	height: 938px;
+	padding-left: 16px;
+}
+@media screen and (max-width: 768px) {
+	.common_container {
+		height: 540px;
+	}
+}
+
+/* ヘッダー部分 */
+header {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 60px;
+	justify-content: space-between;
+	align-items: center;
+}
+@media screen and (max-width: 768px) {
+	header {
+		justify-content: stretch;
+	}
+}
+
+.logo {
+	width: 218px;
+	margin-top: 8px;
+}
+
+.header_center {
+	margin-left: 130px;
+}
+@media screen and (max-width: 768px) {
+	.header_center {
+		margin-left: 100px;
+	}
+}
+
+.header_center ul {
+	display: flex;
+}
+
+.list {
+	margin: 0 70px;
+	color: white;
+}
+@media screen and (max-width: 768px) {
+	.list {
+		margin: 0 4px;
+	}
+
+}
+
+.header_center a {
+	color: white;
+}
+
+.room_search {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	border-radius: 6px;
+	padding: 6px 30px;
+	margin-right: 86px;
+}
+@media screen and (max-width: 768px) {
+	.room_search {
+		margin-right: 4px;
+		margin-left: 20px;
+		padding: 6px 4px;
+	}
+}
+
+/* コンテナ共通部分の設定 */
+.container {
+	width: 100wh;
+}
+
+/* トップコンテナ */
+.top_container .top_text {
+	color: white;
+	font-size: 70px;
+	padding: 200px 0 0 14px;
+}
+
+/* リゾート施設コンテナ */
+.resort_container {
+	margin-top: 130px;
+	height: 600px;
+}
+
+.title {
+	text-align: center;
+	font-size: 22px;
+}
+
+.resort_group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	line-height: 70px;
+}
+
+.resort_subtitle {
+	font-size: 18px;
+}
+
+.resort_left p,
+.resort_right p {
+	text-align: center;
+}
+
+.line {
+	display: inline-block;
+	width: 4px;
+	background-color: #5DB9B7;
+	margin: auto 0;
+	height: 500px;
+}
+@media screen and (max-width: 768px) {
+	.line {
+		display: block;
+		width: 580px;
+		height: 4px;
+		margin: 8px auto;
+	}
+}
+
+.resort_photos {
+	display: grid;
+	grid-template-rows: repeat(2, 240px);
+	grid-template-columns: repeat(2, 360px);
+	justify-items: center;
+	margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+	.resort_photos {
+		grid-template-rows: repeat(2, 230px);
+		grid-template-columns: repeat(2, 290px);
+		margin-bottom: 20px;
+	}
+}
+
+.resort_photos img {
+	width: 340px;
+	height: 190px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+	.resort_photos img {
+		width: 270px;
+		height: 180px;
+	}
+}
+
+.resort_photos p {
+	line-height: 1.2;
+	text-align: left;
+}
+
+.place {
+	font-size: 14px;
+}
+
+.point {
+	font-size: 18px;
+}
+
+/* おすすめの体験コンテナ */
+.experience_container {
+	margin-top: 120px;
+}
+@media screen and (max-width: 768px) {
+	.experience_container {
+		margin-top: 640px;
+	}
+}
+
+.experience_title {
+	margin-bottom: 20px;
+}
+
+.experience_photos {
+	display: grid;
+	grid-template-rows: 200px 200px 340px;
+	grid-template-columns: 560px 280px 560px;
+	row-gap: 20px;
+	column-gap: 20px;
+	place-content: center;
+}
+@media screen and (max-width: 768px) {
+	.experience_photos {
+		display: block;
+		margin: 0 0 30px 90px;
+	}
+}
+
+.photo2-1 {
+	grid-area: 1 / 1 / 3 / 3;
+}
+
+.photo2-2 {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.photo2-3 {
+	grid-area: 2 / 3 / 3 / 4;
+}
+
+.photo2-4 {
+	grid-area: 3 / 1 / 4 / 2;
+}
+
+.photo2-5 {
+	grid-area: 3 / 2 / 4 / 4;
+}
+
+.photo2 {
+	position: relative;
+}
+
+.photo2 img {
+	object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+	.photo2 img {
+		display: none;
+	}
+}
+
+.photo2 p {
+	position: absolute;
+	color: white;
+	font-size: 32px;
+	left: 4%;
+}
+@media screen and (max-width: 768px) {
+	.photo2 p {
+		color: #666666;
+		position: initial;
+	}
+}
+
+/* 写真タイトルの高さを個々で微調整 */
+.photo2-1 p {
+	top: 85%;
+}
+
+.photo2-2 p {
+	top: 70%;
+}
+
+.photo2-3 p {
+	top: 70%;
+}
+
+.photo2-4 p {
+	top: 70%;
+}
+
+.photo2-5 p {
+	top: 70%;
+}
+
+/* 写真サイズを個々で設定 */
+.photo2-1 img {
+	width: 860px;
+	height: 420px;
+}
+
+.photo2-2 img {
+	width: 560px;
+	height: 200px;
+}
+
+.photo2-3 img {
+	width: 560px;
+	height: 200px;
+}
+
+.photo2-4 img {
+	width: 560px;
+	height: 310px;
+}
+
+.photo2-5 img {
+	width: 860px;
+	height: 310px;
+}
+
+.list_btn {
+	display: block;
+	cursor: pointer;
+	margin: 0 auto;
+	background-color: white;
+	padding: 14px 83px;
+	border-radius: 0;
+	border: 1px solid gray;
+	box-shadow: 1px 3px 2px 0px rgba(104, 104, 104, 0.5);
+}
+
+/* ボタンを押したように見せる */
+.list_btn:active {
+	box-shadow: unset;
+	transform: translateY(2px);
+}
+
+/* 旅の提案コンテナ */
+.suggest_container {
+	margin: 110px 0 20px 0;
+	height: 800px;
+}
+@media screen and (max-width: 768px) {
+	.suggest_container {
+		height: 460px;
+		margin-bottom: 0;
+	}
+}
+
+.suggest_title {
+	margin-bottom: 20px;
+}
+
+.suggest_container img {
+	width: 1450px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+	.suggest_container img {
+		width: 580px;
+	}
+}
+
+/* お知らせコンテナ */
+.notice_container {
+	height: 800px;
+}
+
+.topics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+	width: 1440px;
+	height: 185px;
+	margin: 20px auto;
+	background-color: rgb(235, 235, 235);
+}
+@media screen and (max-width: 768px) {
+	.topics {
+		justify-content: center;
+		width: 580px;
+		height: 160px;
+		padding: 20px 0;
+	}
+}
+
+.topics2 {
+	height: 195px;
+}
+@media screen and (max-width: 768px) {
+	.topics2 {
+		height: 160px;
+	}
+}
+
+.topics3 {
+	margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+	.topics3 {
+		padding: 0 20px 20px 0;
+		height: 180px;
+	}
+}
+
+.topics_img {
+	width: 480px;
+	height: 150px;
+	margin: 0 45px 0 70px;
+}
+@media screen and (max-width: 768px) {
+	.topics_img {
+		width: 200px;
+		height: 60px;
+	}
+}
+
+.topics_title {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+	.topics_text {
+		margin-right: auto;
+		padding-left: 40px;
+	}
+}
+
+/* フッター部分 */
+footer {
+	position: relative;
+	background-color: rgb(235, 235, 235);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 370px;
+	margin-top: 80px;
+	padding-left: 80px;
+}
+@media screen and (max-width: 768px) {
+	footer {
+		justify-content: start;
+		height: 560px;
+		flex-flow: column;
+		margin-top: 20px;
+		padding: 30px 0 0 0;
+	}
+}
+
+.footer_left {
+	margin-right: 100px;
+}
+@media screen and (max-width: 768px) {
+	.footer_left {
+		margin-right: 0;
+	}
+}
+
+.footer_logo {
+	width: 340px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+	.footer_logo {
+		margin-bottom: 0;
+	}
+}
+
+.footer_table {
+	width: 380px;
+	color: rgb(102, 102, 102);
+	margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+	.footer_table {
+		margin-bottom: 30px;
+	}
+}
+
+.footer_table .table_data {
+	border-bottom: 1px solid rgb(102, 102, 102);
+	padding: 10px 0 2px 10px;
+}
+
+.footer_map {
+	width: 580px;
+}
+@media screen and (max-width: 768px) {
+	.footer_map {
+		width: 380px;
+		height: 200px;
+		border-radius: 8px;
+	}
+}
+
+.return_btn {
+	position: absolute;
+	bottom: 10px;
+	right: 2px;
+	cursor: pointer;
+	color: white;
+	background-color: rgb(215, 215, 215);
+	border: none;
+	padding: 14px 62px;
+}
+@media screen and (max-width: 768px) {
+	.return_btn {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.return_btn {
+		display: block;
+	}
+}
+
+/* ホバー時に色を変える */
+.return_btn:hover {
+	background-color: black;
+	transition: 0.4s;
+}
