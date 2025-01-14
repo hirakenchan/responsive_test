@@ -165,7 +165,7 @@ header {
 
 /* コンテナ共通部分の設定 */
 .container {
-	width: 100wh;
+	width: 100vw;
 }
 
 /* トップコンテナ */
@@ -414,15 +414,26 @@ header {
 	margin-bottom: 20px;
 }
 
-.suggest_container img {
+.suggest_img {
 	width: 1450px;
 	margin: 0 auto;
 	padding-bottom: 30px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 5.0s;
+	transform: translateY(30px);
 }
 @media screen and (max-width: 768px) {
-	.suggest_container img {
+	.suggest_img {
 		width: 580px;
 	}
+}
+
+.is-active {
+	transition-delay: 0.2s;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 /* お知らせコンテナ */
