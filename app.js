@@ -3,11 +3,17 @@ $(function() {
 });
 
 
-
 window.addEventListener('scroll', function() {
     const suggest_img = document.querySelectorAll('.suggest_img');
     const scroll = window.scrollY;
     const windowHeight = window.innerHeight;
+    const header = this.document.querySelector('header');
+
+    if (scroll <= 0) {
+        header.classList.remove("scroll");
+    } else {
+        header.classList.add("scroll");
+    }
 
     suggest_img.forEach(function(img) {
         const distanceToImg = img.offsetTop;
