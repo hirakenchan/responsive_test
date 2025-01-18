@@ -1,9 +1,9 @@
-$(function() {
-// ここに追記
+$(function () {
+    // ここに追記
 });
 
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const suggest_img = document.querySelectorAll('.suggest_img');
     const scroll = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -15,9 +15,9 @@ window.addEventListener('scroll', function() {
         header.classList.add("scroll");
     }
 
-    suggest_img.forEach(function(img) {
+    suggest_img.forEach(function (img) {
         const distanceToImg = img.offsetTop;
-        if(scroll + windowHeight - 300 > distanceToImg) {
+        if (scroll + windowHeight - 300 > distanceToImg) {
             img.classList.add('is-active');
         }
         else {
