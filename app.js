@@ -29,8 +29,9 @@ $(function () {
     //     modal.style.display = 'block';
     // }
 
-    $('#room_search').on('click', function() {
-        $('#modal').css('display', 'block');
+    $('.room_search').on('click', function() {
+        $('.modal').css('display', 'block');
     });
+
 });
 
